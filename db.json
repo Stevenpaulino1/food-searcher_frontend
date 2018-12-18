@@ -1,0 +1,108 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "image": "https://intheweehours.files.wordpress.com/2013/10/photo-1-1-400x400.jpg?w=625",
+      "title": "Food and DOg",
+      "headline": "lorem and stuff",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Steven"
+    },
+    {
+      "id": 2,
+      "image": "https://prods3.imgix.net/images/articles/2015_08/Web-Category-Chefs-Best-Instagram-Accounts-Jamie-Oliver-Dominique-Ansel-Dan-Barber-Jenn-Louis-Jennifer-Yee-Marco-Canora-Food.jpg",
+      "title": "Pizza dizza",
+      "headline": "lorem and stuff",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Steven"
+    },
+    {
+      "id": 3,
+      "title": "chinese food",
+      "image": " http://wasabiasheville.com/wp-content/uploads/2015/12/20151124-Wasabi-IMG_0002-EXPORT-400x400.jpg",
+      "headline": "lorem and stuff",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Steven"
+    },
+    {
+      "title": "Struggle",
+      "image": "https://img.buzzfeed.com/buzzfeed-static/static/2013-12/enhanced/webdr03/7/14/original-grid-image-5007-1386445066-4.jpg?crop=601:601;2,0&downsize=400:*&output-format=auto&output-quality=auto",
+      "headline": "yes",
+      "body": "Steven attonbitus aliqua. Est theca tempora. Delectus adflicto abbas.\\nCursim alveus sordeo. Curtus cetera tonsor. Aut tabgo coma.\\nQui ut atque. Illo temporibus dolorum. Vomica aggero creo.",
+      "author": "Steven",
+      "id": 4
+    },
+    {
+      "title": "Up on the 8th floor",
+      "image": "https://img.allw.mn/food/thumbs/p0/j1/oqvch9wk54da61ee5dd20422717652.jpg ",
+      "headline": "Im hungry ",
+      "body": "This shit is a fucking hit you know what I mean son?",
+      "author": "Steven",
+      "id": 5
+    },
+    {
+      "title": "today is tuesday ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97lY1jacm1GbGnLqJ5VFQeAe0elill8KtN06gzcPEp_P4zjtB",
+      "headline": "still working on this",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Steven",
+      "id": 6
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 7
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 8
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 9
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 10
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 11
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 12
+    },
+    {
+      "title": "",
+      "headline": "",
+      "body": "",
+      "author": "Steven",
+      "id": 13
+    }
+  ],
+  "User": {
+    "first_name": "Steven",
+    "last_name": "Paulino",
+    "city": "Bronx",
+    "state": "New York",
+    "bio": "Regular degular kid from the Bronx"
+  }
+}

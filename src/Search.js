@@ -7,14 +7,14 @@ export default class Venues extends Component {
 
 render(){
   return(
-<header className={style.header}>
-  <div className={style.search}>
+<header className="header">
+  <div className="search">
     <label>Find</label>
-    <input className={style.query} type='text'name='query' onChange={this.props.setQuery} placeholder='Hungry for...?' />
-    <span className={style.bar}>|</span>
+    <input className="query" type='text'name='query' onChange={this.props.setQuery} placeholder='Hungry for...?' />
+    <span className="bar">|</span>
     <label>Near</label>
-    <input className={style.near} type='text'name='location' onChange={this.props.setLocation} placeholder='New York' />
-    <button className={style.find} onClick={this.props.fetchVenues}> Search </button>
+    <input className="near" type='text'name='location' onChange={this.props.setLocation} placeholder='New York' />
+    <button className="find" onClick={this.props.fetchVenues}> Search </button>
   </div>
 </header>
 )}

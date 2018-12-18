@@ -29,11 +29,11 @@ fetchVenues = () => {
       "near": this.state.location,
       "intent": 'browse',
       'query': this.state.query,
-      'limit': 5,
+      'limit': 9,
       // 'category':'4d4b7105d754a06374d81259'
 
     };
-    // console.log("What is this?",foursquare.venues)
+    // console.log("What is this?",foursquare.venues.getVenue)
 
     foursquare.venues.recommendations(params)
     // foursquare.venues.getVenuePhotos(params)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ItemSpecs from './ItemSpecs'
 
 class ItemCard extends Component {
 state = {
@@ -12,19 +12,18 @@ handleClick =() => {
 
   render() {
       const { venue, photo_url } = this.props
-      console.log(venue);
+      // console.log(venue);
     return (
-      <ul onClick={()=>this.handleClick()}>
-      {this.state.clicked? (<div>
+      <ul className="row" onClick={()=>this.handleClick()}>
+      {this.state.clicked? (<div className="box">
       <img src={photo_url} alt="Where am i"/>
       <h1>{venue.venue.name}</h1>
       <h4>{venue.snippets.items[0].detail.object.text}</h4>
-      </div>):("yerr")}
+      </div>):(<ItemSpecs venue={venue.venue}/>)}
 
       </ul>
     )
   }
 }
-  // {this.props.item}
 
 export default ItemCard;
