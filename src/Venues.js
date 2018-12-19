@@ -33,14 +33,15 @@ fetchVenues = () => {
       // 'category':'4d4b7105d754a06374d81259'
 
     };
-    // console.log("What is this?",foursquare.venues.getVenue)
-
-    foursquare.venues.recommendations(params)
+    // console.log("What is this?",foursquare)
+    // debugger
+    // foursquare.venues.recommendations(params)
     // foursquare.venues.getVenuePhotos(params)
+    foursquare.venues.getVenues({ 'near': 'Brooklyn, NY', 'query': 'Joya' })
 
       .then(res=> {
-        // console.log("the fetch",res)
-        this.setState({ venues: res.response.group.results });
+        console.log("the fetch",res)
+        // this.setState({ venues: res.response.group.results });
       })
   }
 

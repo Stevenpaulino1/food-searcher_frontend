@@ -5,16 +5,16 @@ export default class UploadPhoto extends Component {
         img: null,
     }
 
-    showWidget = (widget) =>{
-        widget.open()
-      }
+    showWidget = (widget) => {
+      widget.open()
+    }
 
     checkUploadResult = (resultEvent, widget) => {
     // console.log("Steven holla",resultEvent.event);
     // console.log(widget);
     if (resultEvent.event === 'success'){
           widget.close()
-          // this.setState({ img: resultEvent.info.secure_url})
+          this.setState({ img: resultEvent.info.secure_url})
         this.props.handlePhoto(resultEvent.info.secure_url)
         }
     }
@@ -22,7 +22,7 @@ export default class UploadPhoto extends Component {
 
 
     render(){
-      console.log(this.props);
+      // console.log(this.props);
         // console.log("this is your photo",this.state.photo)
         let widget = window.cloudinary.createUploadWidget({cloudName: "df3knd9zd", uploadPreset: "rfk3xygs" }
         , (error, result) => {this.checkUploadResult(result, widget)}

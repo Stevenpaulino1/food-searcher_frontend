@@ -8,6 +8,7 @@ import style from './style.css';
 
 
 
+
 class MainContainer extends Component {
   state = {
     newPostObj:[],
@@ -17,14 +18,14 @@ class MainContainer extends Component {
 
   handleSubmit =(e,postObj) => {
     e.preventDefault()
+    // console.log(postObj);
     // debugger
-    if (postObj.imageUrl==true){
-      console.log("in the body");
+      // console.log("in the body");
     const options = {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
-        image: postObj.image,
+        image: postObj.imageUrl,
         title: postObj.title,
         headline: postObj.headline,
         body: postObj.body,
@@ -33,18 +34,25 @@ class MainContainer extends Component {
       }
     fetch("http://localhost:3000/posts", options)
       .then(res => res.json())
-      .then(newPostObj => this.setState({newPostObj}))
-  }
-}
-  componentDidMount(){
+      .then(newPost => this.setState({
+        posts: [...this.state.posts, newPost]
+      })
+    )
+      // .then(r => console.log("What?",r))
+      // .then()
+    }
+
+componentDidMount(){
     fetch("http://localhost:3000/posts")
     .then(r=>r.json())
     .then(posts => this.setState({posts}))
-  }
+}
 
   render() {
+
     return (
       <div >
+
         <PostForm handleSubmit={this.handleSubmit}/>
 
         <Venues/>

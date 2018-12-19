@@ -23,20 +23,21 @@ export default class PostForm extends Component {
 
 
   render(){
-    console.log(this.state);
+    // console.log(this.state);
     // if(this.state.img){
     //     image = <img className="box" src={this.state.imageUrl} alt=""/>
     //           }
     return(
       <div>
           <h1>Create a blog post </h1>
+          <UploadPhoto handlePhoto={this.handlePhoto}/>
+
             <form onSubmit={(e) => this.props.handleSubmit(e,this.state)}>
 
             <label>
               Photo:
               {/*<input type="text" name="image" readOnly value={this.state.image}/>*/}
               {/*image*/}
-              <UploadPhoto handlePhoto={this.handlePhoto}/>
             </label>
 
             <label>
