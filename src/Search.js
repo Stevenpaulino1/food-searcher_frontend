@@ -20,7 +20,7 @@ export default class Venues extends Component {
             className="near"
             type="text"
             name="location"
-            onChange={this.props.setLocation}
+            onChange={this.props.setQuery}
             placeholder="New York"
           />
           <button className="find" onClick={this.props.fetchVenues}>

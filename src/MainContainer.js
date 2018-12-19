@@ -3,6 +3,7 @@ import Venues from "./Venues";
 import PostForm from "./PostForm";
 import PostFeed from "./PostFeed";
 import style from "./style.css";
+import {Route} from "react-router-dom"
 
 class MainContainer extends Component {
   state = {
@@ -48,8 +49,13 @@ class MainContainer extends Component {
       <div>
         <PostForm handleSubmit={this.handleSubmit} />;
         <Venues />
-        <PostFeed posts={this.state.posts} />
-      </div>
+        <Route
+            path="/feed"
+              render={()=>(
+                <PostFeed posts={this.state.posts} />
+              )}
+        />
+        </div>
     );
   }
 }

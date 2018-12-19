@@ -33,13 +33,13 @@ export default class Venues extends Component {
     };
     // console.log("What is this?",foursquare)
     // debugger
-    // foursquare.venues.recommendations(params)
+    foursquare.venues.recommendations(params)
     // foursquare.venues.getVenuePhotos(params)
-    foursquare.venues.getVenues({ near: "Brooklyn, NY", query: "Joya" }).then(
-      res => console.log("the fetch", res.response)
-      // this.setState({ venues: res.response.group.results })
+    // foursquare.venues.getVenues({ near: "Brooklyn, NY", query: "Joya" })
+    .then(res =>
+      this.setState({ venues: res.response.group.results })
     );
-    debugger;
+    // debugger;
   };
 
   //
