@@ -10,7 +10,7 @@ export default class UploadPhoto extends Component {
   };
 
   checkUploadResult = (resultEvent, widget) => {
-    // console.log("Steven holla",resultEvent.event);
+    console.log("Steven holla",resultEvent.event);
     // console.log(widget);
     if (resultEvent.event === "success") {
       widget.close();

@@ -4,7 +4,7 @@ import style from "./style.css";
 export default class Venues extends Component {
   render() {
     return (
-      <header className="header">
+      
         <div className="search">
           <label>Find</label>
           <input
@@ -28,7 +28,7 @@ export default class Venues extends Component {
             Search{" "}
           </button>
         </div>
-      </header>
+
     );
   }
 }

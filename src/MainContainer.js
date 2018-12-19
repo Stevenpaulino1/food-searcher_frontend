@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Venues from "./Venues";
-import PostForm from "./PostForm";
 import PostFeed from "./PostFeed";
 import style from "./style.css";
-import {Route} from "react-router-dom"
+import PostForm from "./PostForm";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class MainContainer extends Component {
   state = {
@@ -34,8 +34,6 @@ class MainContainer extends Component {
           posts: [...this.state.posts, newPost]
         })
       );
-    // .then(r => console.log("What?",r))
-    // .then()
   };
 
   componentDidMount() {
@@ -46,16 +44,14 @@ class MainContainer extends Component {
 
   render() {
     return (
-      <div>
-        <PostForm handleSubmit={this.handleSubmit} />;
-        <Venues />
-        <Route
-            path="/feed"
-              render={()=>(
-                <PostFeed posts={this.state.posts} />
-              )}
-        />
+      <Router>
+        <div>
+        <h1>Today's posts</h1>
+          <PostFeed posts={this.state.posts} />
+          <Route exact path="/explore" component={Venues} />
+          <Route exact path="/createPost" component={PostForm} />
         </div>
+      </Router>
     );
   }
 }

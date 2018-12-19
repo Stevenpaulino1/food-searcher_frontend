@@ -14,7 +14,7 @@ class ItemCard extends Component {
     const { venue, photo_url } = this.props;
     // console.log(venue);
     return (
-      <ul className="row" onClick={() => this.handleClick()}>
+      <ul  onClick={() => this.handleClick()}>
         {this.state.clicked ? (
           <div className="box">
             <img src={photo_url} alt="Where am i" />

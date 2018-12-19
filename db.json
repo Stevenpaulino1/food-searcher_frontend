@@ -49,84 +49,36 @@
       "id": 6
     },
     {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545162712/dwc8klt1eepo6ladaesb.jpg",
-      "title": "this is steven, a snack",
+      "id": 1,
+      "image": "https://intheweehours.files.wordpress.com/2013/10/photo-1-1-400x400.jpg?w=625",
+      "title": "Food and DOg",
+      "headline": "lorem and stuff",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Helen"
+    },
+    {
+      "id": 2,
+      "image": "https://prods3.imgix.net/images/articles/2015_08/Web-Category-Chefs-Best-Instagram-Accounts-Jamie-Oliver-Dominique-Ansel-Dan-Barber-Jenn-Louis-Jennifer-Yee-Marco-Canora-Food.jpg",
+      "title": "Pizza dizza",
+      "headline": "lorem and stuff",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Helen"
+    },
+    {
+      "id": 3,
+      "title": "chinese food",
+      "image": " http://wasabiasheville.com/wp-content/uploads/2015/12/20151124-Wasabi-IMG_0002-EXPORT-400x400.jpg",
+      "headline": "lorem and stuff",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "Helen"
+    },
+    {
+      "title": "Struggle",
+      "image": "https://img.buzzfeed.com/buzzfeed-static/static/2013-12/enhanced/webdr03/7/14/original-grid-image-5007-1386445066-4.jpg?crop=601:601;2,0&downsize=400:*&output-format=auto&output-quality=auto",
       "headline": "yes",
-      "body": "work you bum",
-      "author": "Steven",
-      "id": 7
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545162980/ofzmwufqwabpjaaoa0b3.jpg",
-      "title": "this is another try",
-      "headline": "why",
-      "body": "help me",
-      "author": "Steven",
-      "id": 8
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545163594/zq2aoliltbbc91dadqee.png",
-      "title": "Officiis vitae subvenio vos.",
-      "headline": "12345678900000000000",
-      "body": "help",
-      "author": "Steven",
-      "id": 9
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545163681/y2ztyhneruwzasyoeoi6.jpg",
-      "title": "",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 10
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545163722/qom3p6kxqlsmzrjg5dg8.jpg",
-      "title": "",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 11
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545163754/pkeelqzycxxtajjogrnh.png",
-      "title": "",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 12
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545163897/jargd1canfmnlitj3pf7.png",
-      "title": "",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 13
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545164337/sjrqbbhrjthli9idshvb.jpg",
-      "title": "",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 14
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545168445/sfixdxxhnldgkj50r1ad.jpg",
-      "title": "this is lit",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 15
-    },
-    {
-      "image": "https://res.cloudinary.com/df3knd9zd/image/upload/v1545168543/wjdgtnnzrs4m12e1brzm.jpg",
-      "title": "LITTY2T*(#TY",
-      "headline": "",
-      "body": "",
-      "author": "Steven",
-      "id": 16
+      "body": "Steven attonbitus aliqua. Est theca tempora. Delectus adflicto abbas.\\nCursim alveus sordeo. Curtus cetera tonsor. Aut tabgo coma.\\nQui ut atque. Illo temporibus dolorum. Vomica aggero creo.",
+      "author": "Helen",
+      "id": 4
     }
   ],
   "User": {
@@ -135,5 +87,12 @@
     "city": "Bronx",
     "state": "New York",
     "bio": "Regular degular kid from the Bronx"
+  },
+  "User": {
+    "first_name": "Helen",
+    "last_name": "Yassss",
+    "city": "New York City",
+    "state": "New York",
+    "bio": "Regular degular lady from the city"
   }
 }

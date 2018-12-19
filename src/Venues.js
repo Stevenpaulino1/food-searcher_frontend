@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ItemCard from "./ItemCard";
 import Search from "./Search";
 import style from "./style.css";
+import HomeNavBar from './HomeNavBar'
 
 var foursquare = require("react-foursquare")({
   clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",
@@ -66,7 +67,8 @@ export default class Venues extends Component {
   render() {
     // console.log("My current state",this.state.venues);
     return (
-      <div className={style.container}>
+      <div className="row">
+
         <Search setQuery={this.setQuery} fetchVenues={this.fetchVenues} />
         {this.renderResults()}
       </div>
