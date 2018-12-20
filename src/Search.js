@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import style from "./style.css";
 
 export default class Venues extends Component {
   render() {
     return (
-      
+
         <div className="search">
           <label>Find</label>
           <input

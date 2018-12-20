@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask, MDBRow, MDBCol, MDBBtn,   MDBView, MDBContainer, MDBFormInline } from "mdbreact";
+import { MDBRow, MDBCol,  MDBContainer} from "mdbreact";
 // import "./Home.css";
 
 class Home extends React.Component {
@@ -15,18 +14,11 @@ class Home extends React.Component {
   };
 
   render() {
-    const navStyle = { marginTop: "4rem" };
-    const overlay = (
-      <div
-        id="sidenav-overlay"
-        style={{ backgroundColor: "transparent" }}
-        onClick={this.handleTogglerClick}
-      />
-    );
+    
     return (
       <div id="apppage">
 
-        
+
         <MDBContainer>
           <MDBRow className="py-5">
             <MDBCol md="12" className="text-center">

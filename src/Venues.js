@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import ItemCard from "./ItemCard";
 import Search from "./Search";
-import style from "./style.css";
-import HomeNavBar from './HomeNavBar'
 
 var foursquare = require("react-foursquare")({
   clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",

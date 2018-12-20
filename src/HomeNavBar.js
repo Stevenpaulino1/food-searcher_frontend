@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, NavbarBrand, NavbarNav, NavItem, NavLink, NavbarToggler, Collapse, FormInline, Dropdown, DropdownToggle, DropdownMenu,  DropdownItem } from "mdbreact";
+import { Navbar, NavbarBrand, NavbarNav, NavItem, NavLink, NavbarToggler, Collapse} from "mdbreact";
 // import {Link} from "react-router-dom"
 
 
@@ -8,14 +8,14 @@ class HomeNavBar extends React.Component {
     isOpen: false
   };
 
-  toggleCollapse = this.setState({ isOpen: !this.state.isOpen });
+  toggleCollapse =()=> this.setState({ isOpen: !this.state.isOpen });
 
   render() {
     return (
 
       <Navbar style={{backgroundColor: "#6740B5" }} dark expand="md">
           <NavbarBrand>
-            <NavLink to="/"><strong className="white-text">Food Searcher</strong></NavLink>
+            <NavLink to="/"><strong className="white-text">Wanderlust</strong></NavLink>
 
           </NavbarBrand>
           <NavbarToggler
@@ -36,6 +36,9 @@ class HomeNavBar extends React.Component {
 
               <NavItem>
                 <NavLink to="/form">form</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/profile">Profile</NavLink>
               </NavItem>
 
             </NavbarNav>

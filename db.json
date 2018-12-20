@@ -49,7 +49,7 @@
       "id": 6
     },
     {
-      "id": 1,
+      "id": 7,
       "image": "https://intheweehours.files.wordpress.com/2013/10/photo-1-1-400x400.jpg?w=625",
       "title": "Food and DOg",
       "headline": "lorem and stuff",
@@ -57,7 +57,7 @@
       "author": "Helen"
     },
     {
-      "id": 2,
+      "id": 8,
       "image": "https://prods3.imgix.net/images/articles/2015_08/Web-Category-Chefs-Best-Instagram-Accounts-Jamie-Oliver-Dominique-Ansel-Dan-Barber-Jenn-Louis-Jennifer-Yee-Marco-Canora-Food.jpg",
       "title": "Pizza dizza",
       "headline": "lorem and stuff",
@@ -65,7 +65,7 @@
       "author": "Helen"
     },
     {
-      "id": 3,
+      "id": 9,
       "title": "chinese food",
       "image": " http://wasabiasheville.com/wp-content/uploads/2015/12/20151124-Wasabi-IMG_0002-EXPORT-400x400.jpg",
       "headline": "lorem and stuff",
@@ -78,21 +78,22 @@
       "headline": "yes",
       "body": "Steven attonbitus aliqua. Est theca tempora. Delectus adflicto abbas.\\nCursim alveus sordeo. Curtus cetera tonsor. Aut tabgo coma.\\nQui ut atque. Illo temporibus dolorum. Vomica aggero creo.",
       "author": "Helen",
-      "id": 4
+      "id": 10
     }
   ],
-  "User": {
-    "first_name": "Steven",
-    "last_name": "Paulino",
-    "city": "Bronx",
-    "state": "New York",
-    "bio": "Regular degular kid from the Bronx"
-  },
   "User": {
     "first_name": "Helen",
     "last_name": "Yassss",
     "city": "New York City",
     "state": "New York",
     "bio": "Regular degular lady from the city"
+  },
+  "User": {
+    "first_name": "steven",
+    "last_name": "Paulino",
+    "city": "New York City",
+    "state": "New York",
+    "bio": "Regular degular girl from the Bronx",
+    "image":"https://static1.squarespace.com/static/587698341e5b6c7bb7482c55/t/58879a42f7e0abc9d8293be6/1485285074557/stevenpPortrait?format=1000w"
   }
 }

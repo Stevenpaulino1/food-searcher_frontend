@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-var foursquare = require("react-foursquare")({
-  clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",
-  clientSecret: "BNESFLYITTVQZN0LJDUNENMKFNSN2O3DUHGDTS2ITB3Z2RM1"
-});
+// var foursquare = require("react-foursquare")({
+//   clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",
+//   clientSecret: "BNESFLYITTVQZN0LJDUNENMKFNSN2O3DUHGDTS2ITB3Z2RM1"
+// });
 export default class ItemSpecs extends Component {
   render() {
     // var params = {
