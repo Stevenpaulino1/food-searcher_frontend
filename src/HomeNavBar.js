@@ -27,15 +27,15 @@ class HomeNavBar extends React.Component {
             navbar
           >
             <NavbarNav left>
-              <NavItem active>
+              <NavItem>
                 <NavLink to="/home">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/explore">Venues</NavLink>
+                <NavLink to="/explore">Explore</NavLink>
               </NavItem>
 
               <NavItem>
-                <NavLink to="/form">form</NavLink>
+                <NavLink to="/form">Create a Blog</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/profile">Profile</NavLink>

@@ -27,7 +27,7 @@ export default class Venues extends Component {
       near: this.state.location,
       intent: "browse",
       query: this.state.query,
-      limit: 9
+      limit: 5
       // 'category':'4d4b7105d754a06374d81259'
     };
     // console.log("What is this?",foursquare)

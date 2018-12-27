@@ -14,8 +14,7 @@ import { Route, Switch, withRouter } from "react-router-dom";
 class App extends Component {
   state = {
     newPostObj: [],
-    posts: [],
-    user:[]
+    posts: []
   };
 
   handleSubmit = (e, postObj) => {
@@ -31,10 +30,10 @@ class App extends Component {
         title: postObj.title,
         headline: postObj.headline,
         body: postObj.body,
-        author: "Steven"
+        user: "Steven"
       })
     };
-    fetch("http://localhost:3000/posts", options)
+    fetch("http://localhost:3000/api/v1/posts", options)
       .then(res => res.json())
       .then(newPost =>
         this.setState({
@@ -43,20 +42,21 @@ class App extends Component {
       )
       this.props.history.push("/home");
   };
+
+
+
+
+
   componentDidMount() {
-    fetch("http://localhost:3000/posts")
+    fetch("http://localhost:3000/api/v1/posts")
       .then(r => r.json())
-      .then(posts => this.setState({ posts }))
-      .then(this.getUser())
+      .then(posts => this.setState({posts:posts.data}))
   }
 
-getUser = () => {
-  fetch("http://localhost:3000/user")
-    .then(r => r.json())
-    .then(user => this.setState({user}))
-}
+
 
   render() {
+    // console.log(this.state.posts);
     return (
       <div>
         <HomeNavBar/>
