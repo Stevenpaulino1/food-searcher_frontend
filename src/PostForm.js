@@ -20,7 +20,7 @@ export default class PostForm extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     // if(this.state.img){
     //     image = <img className="box" src={this.state.imageUrl} alt=""/>
     //           }

@@ -9,7 +9,7 @@ class PostFeed extends Component {
 
 
   render() {
-    // console.log(this.props.posts);
+    console.log("Array of posts",this.props.posts);
     return(
       <div className="row">
          {this.mapPosts()}

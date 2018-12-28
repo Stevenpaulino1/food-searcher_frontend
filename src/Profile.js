@@ -4,7 +4,7 @@ import PostFeed from './PostFeed'
 export default class Profile extends Component {
 
   render(){
-    console.log(this.props);
+    console.log("What are my props",this.props);
       const { user }= this.props
     return(
       <div>

@@ -28,7 +28,7 @@ class HomeNavBar extends React.Component {
           >
             <NavbarNav left>
               <NavItem>
-                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/home">Blog Feed</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/explore">Explore</NavLink>

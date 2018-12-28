@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class PostTile extends Component {
   render() {
-    // console.log("why",this.props.post.attributes);
+    console.log("why",this.props.post.attributes);
     const { post } = this.props
     return (
       <ul key={post.key}>

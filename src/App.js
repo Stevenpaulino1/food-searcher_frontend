@@ -19,7 +19,7 @@ class App extends Component {
 
   handleSubmit = (e, postObj) => {
     e.preventDefault();
-    // console.log(postObj);
+    console.log("Post obj", postObj);
     // debugger
     // console.log("in the body");
     const options = {
@@ -30,14 +30,14 @@ class App extends Component {
         title: postObj.title,
         headline: postObj.headline,
         body: postObj.body,
-        user: "Steven"
       })
     };
     fetch("http://localhost:3000/api/v1/posts", options)
       .then(res => res.json())
+      // .then(newPost => console.log(newPost))
       .then(newPost =>
         this.setState({
-          posts: [...this.state.posts, newPost]
+          posts: [...this.state.posts, newPost.data]
         })
       )
       this.props.history.push("/home");
