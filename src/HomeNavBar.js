@@ -15,7 +15,7 @@ class HomeNavBar extends React.Component {
 
       <Navbar style={{backgroundColor: "#6740B5" }} dark expand="md">
           <NavbarBrand>
-            <NavLink to="/"><strong className="white-text">Wanderlust</strong></NavLink>
+            <NavLink to="/"><h4><strong className="white-text">Wanderlust</strong></h4></NavLink>
 
           </NavbarBrand>
           <NavbarToggler
@@ -38,7 +38,7 @@ class HomeNavBar extends React.Component {
                 <NavLink to="/form">Create a Blog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/profile">Profile</NavLink>
+                <NavLink to="/profile">Profiles</NavLink>
               </NavItem>
 
             </NavbarNav>

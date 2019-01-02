@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+
 import PostTile from "./PostTile";
+
+
+
 
 class PostFeed extends Component {
 
@@ -13,6 +17,7 @@ class PostFeed extends Component {
     return(
       <div className="row">
          {this.mapPosts()}
+
       </div>
     )
   }

@@ -11,7 +11,7 @@ export default class Venues extends Component {
             type="text"
             name="query"
             onChange={this.props.setQuery}
-            placeholder="Hungry for...?"
+            placeholder="Shops, bars, places..."
           />
           <span className="bar">|</span>
           <label>Near</label>

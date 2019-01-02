@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import UploadPhoto from "./CloudinaryWidget";
-// let image
+import { MDBInput } from 'mdbreact';
 
 export default class PostForm extends Component {
   state = {
@@ -11,7 +11,6 @@ export default class PostForm extends Component {
   };
 
   handleChange = e => {
-    // console.log("hittin", event.target.value)
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -20,10 +19,7 @@ export default class PostForm extends Component {
   };
 
   render() {
-    // console.log(this.state);
-    // if(this.state.img){
-    //     image = <img className="box" src={this.state.imageUrl} alt=""/>
-    //           }
+    console.log(this.state);
     return (
       <div>
         <h1>Create a blog post </h1>
@@ -61,20 +57,19 @@ export default class PostForm extends Component {
 
           <label>
             Body:
-            <textarea
-              rows="4"
-              cols="50"
-              name="body"
-              value={this.state.body}
+            <MDBInput
+              type="textarea"
+              label="Icon Prefix"
+              rows="2"
+              icon="pencil"
               onChange={this.handleChange}
-            >
-              Write whats on your hungry mind...
-            </textarea>
+              placeholder="Whats on your mind?"
+            />
           </label>
 
           <br />
 
-          <button type="submit">Send Your Thoughts </button>
+           <button type="submit">Send Your Thoughts </button>
         </form>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import ItemCard from "./ItemCard";
+// import ItemCard from "./ItemCard";
 import Search from "./Search";
+// import style from "./style.css"
 
 var foursquare = require("react-foursquare")({
   clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",
@@ -27,7 +28,7 @@ export default class Venues extends Component {
       near: this.state.location,
       intent: "browse",
       query: this.state.query,
-      limit: 5
+      limit: 12
       // 'category':'4d4b7105d754a06374d81259'
     };
     // console.log("What is this?",foursquare)
@@ -42,16 +43,27 @@ export default class Venues extends Component {
   };
 
   //
-  renderResults = () => {
-    return this.state.venues.map(venue => (
-      <ItemCard
-        key={venue.id}
-        venue={venue}
-        photo_url={venue.photo.prefix + "400x400" + venue.photo.suffix}
-      />
-    ));
-  };
-
+//   renderResults = () => {
+//     // return this.state.venues.map(venue => (
+//     //   <ItemCard
+//     //     key={venue.id}
+//     //     venue={venue}
+//     //     photo_url={venue.photo.prefix + "400x400" + venue.photo.suffix}
+//     //   />
+//     // ));
+//     _______________________________________________
+//   return this.state.venue.map(venue=> {
+//               if (venue.photo) {
+//                 <ItemCard
+//                  key={venue.id}
+//                  venue={venue}
+//                  photo_url = {venue.photo.prefix + '400x400' + venue.photo.suffix}
+//                  ratingColor = {'background-color: #' + venue.venue.ratingColor}
+//                  category_icon = {venue.venue.categories[0].icon.prefix + '100' +  venue.venue.categories[0].icon.suffix}
+//                  venue_url = {"https://foursquare.com/v/" + venue.venue.id}
+//                 />
+//             }})}
+// ______________________________________
   // var photo_url = item.photo.prefix + '400x400' + item.photo.suffix
   // <a href={venue_url}>
   // getLocation(callback) {
@@ -63,12 +75,43 @@ export default class Venues extends Component {
   // get users location when I switch to a PWA
 
   render() {
-    // console.log("My current state",this.state.venues);
-    return (
-      <div className="row">
 
-        <Search setQuery={this.setQuery} fetchVenues={this.fetchVenues} />
-        {this.renderResults()}
+    return (
+      <div style={{paddingTop: "150px"}}>
+      <Search setQuery={this.setQuery} fetchVenues={this.fetchVenues} />
+      <div className="grid">
+        <div className="col">
+          <div className="row">
+
+
+            { this.state.venues.map(item=> {
+                  if (item.photo) {
+                    var photo_url = item.photo.prefix + '400x400' + item.photo.suffix;
+                    var ratingColor = 'background-color: #' + item.venue.ratingColor;
+                    var category_icon = item.venue.categories[0].icon.prefix + '100' +  item.venue.categories[0].icon.suffix;
+                    var venue_url = "https://foursquare.com/v/" + item.venue.id;
+                    return (
+                      <div className="col-md-4" key={item.venue.id}>
+                      <a href={venue_url}>
+                        <div class="box">
+                          <img src={photo_url}/>
+                          <div className="wrap">
+                            <p className="venue_name">{item.venue.name}</p>
+                            <p className="venue_address">{item.venue.location.address}, {item.venue.location.city}</p>
+                            <span className="rating">{item.venue.rating}</span>
+                            <span className="category"><img class="category_icon" src={category_icon} /></span>
+                          </div>
+                        </div>
+                        </a>
+
+                      </div>
+                    )
+                  }
+                }) }
+              </div>
+              </div>
+        {/*this.renderResults()*/}
+      </div>
       </div>
     );
   }

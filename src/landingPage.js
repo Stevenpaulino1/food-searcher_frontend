@@ -1,26 +1,29 @@
 import React from "react";
-import { MDBRow, MDBCol,  MDBContainer} from "mdbreact";
-// import "./Home.css";
+import { MDBCol } from "mdbreact";
+import { Link } from 'react-router-dom'
+import wanderlust from "./wanderlust-.jpg"
+import "./appPage.css"
 
-class Home extends React.Component {
+class LandingPage extends React.Component {
   state = {
     collapsed: false
   };
 
-  handleTogglerClick = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
+  // handleTogglerClick = () => {
+  //   this.setState({
+  //     collapsed: !this.state.collapsed
+  //   });
+  // };
 
   render() {
-    
+console.log(this.props.handleClick)
     return (
-      <div id="apppage">
+      <div id="apppage" style={{backgroundImage: `url(${wanderlust})`}}>
 
 
-        <MDBContainer>
-          <MDBRow className="py-5">
+
+        <div>
+          <div  className="row">
             <MDBCol md="12" className="text-center">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,11 +35,13 @@ class Home extends React.Component {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </MDBCol>
-          </MDBRow>
-        </MDBContainer>
+          </div >
+        </div>
+{/*        <Link to="/login"><button>Login</button></Link>
+*/}        <Link to="/signup"><button onClick={()=>this.props.handleClick}>Create a Profile</button></Link>
       </div>
     );
   }
 }
 
-export default Home;
+export default LandingPage;
