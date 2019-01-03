@@ -3,6 +3,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 
 const FormPage = () => {
   return (
+    
     <MDBContainer>
       <MDBRow>
         <MDBCol md="6">

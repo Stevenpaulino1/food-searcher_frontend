@@ -12,15 +12,15 @@ export default class PostTile extends Component {
     const { post } = this.props
     return (
 
-      <MDBRow key={post.key}>
-        <MDBCol md="12" className="mb-3">
+
+        <MDBCol key={post.key} md="12" className="mb-3">
           <h1>{post.attributes.title}</h1>
-          <img src={post.attributes.src} className="img-fluid z-depth-1" alt=""  />
+          <img src={post.attributes.src} className="img-thumbnail" alt=""  />
           <h3>{/*post.headline*/}</h3>
           <span>{/*post.author*/}</span>
           <p>{/*post.body*/}</p>
         </MDBCol>
-      </MDBRow>
+
     );
   }
 }

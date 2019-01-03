@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import PostTile from "./PostTile";
 
 
@@ -15,10 +15,11 @@ class PostFeed extends Component {
   render() {
     console.log("Array of posts",this.props.posts);
     return(
-      <div className="row">
+      <MDBContainer className="mt-4">
+        <MDBRow >
          {this.mapPosts()}
-
-      </div>
+         </MDBRow>
+      </MDBContainer>
     )
   }
 }

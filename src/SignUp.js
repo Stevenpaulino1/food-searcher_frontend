@@ -5,10 +5,11 @@ export default class Signup extends Component {
     state = {
         first_name: '',
         last_name: '',
+        bio: '',
         city:'',
         state:'',
         username: '',
-        password: ''
+        password: '',
     }
 
     // add confirm password again
@@ -22,8 +23,9 @@ export default class Signup extends Component {
 
     render(){
         return (
+          <div className="center">
             <div className="login-form">
-              <h2>Sign Up for an account</h2>
+              <h2>Make an account!</h2>
                 <Form onChange={this.handleChange} onSubmit={(e) => this.props.handleSignup(e, this.state)}>
                     <Form.Field>
                         <label>First Name</label>
@@ -34,13 +36,10 @@ export default class Signup extends Component {
                         <input name="last_name"/>
                     </Form.Field>
                     <Form.Field>
-                        <label>Username</label>
-                        <input name="username"/>
+                        <label>Little Bio</label>
+                        <textarea name="bio"/>
                     </Form.Field>
-                    <Form.Field>
-                        <label>Password</label>
-                        <input type='password' name="password"/>
-                    </Form.Field>
+
                     <Form.Field>
                         <label>City</label>
                         <input name="city"/>
@@ -53,13 +52,18 @@ export default class Signup extends Component {
                         <label>Image Url</label>
                         <input name="image"/>
                     </Form.Field>
-                    <Form.Field>
-                        <label>Password</label>
-                        <input placeholder='Password' name="password"/>
-                    </Form.Field>
                         <Button type='submit' className="login-button">Submit</Button>
                 </Form>
+            </div>
             </div>
         )
     }
 }
+// <Form.Field>
+//     <label>Username</label>
+//     <input name="username"/>
+// </Form.Field>
+// <Form.Field>
+//     <label>Password</label>
+//     <input type='password' name="password"/>
+// </Form.Field>

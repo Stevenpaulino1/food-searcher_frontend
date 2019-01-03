@@ -34,10 +34,10 @@ export default class UploadPhoto extends Component {
     }
 
     return (
-      <div className="row">
+      <div className="center">
         {this.state.img ? null : (
           <button onClick={() => this.showWidget(widget)}>
-            Click to upload photo!{" "}
+            Click to choose a photo!{" "}
           </button>
         )}
 

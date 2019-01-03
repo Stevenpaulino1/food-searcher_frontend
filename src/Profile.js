@@ -1,41 +1,33 @@
 
 import React, { Component } from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol } from 'mdbreact';
+import ProfileTile from './profileTile'
 
 class Profile extends Component {
+
+
+  // componentDidMount(){
+  //   fetch('http://localhost:3000/api/v1/users')
+  //   .then(r=>r.json())
+  //   .then(users => this.setState({users: users.data}))
+  // }
+
+  // mappingUsers = () => {
+  //   return this.state.users.map(user => <ProfileTile key={user.id} user={user}/>)
+  // }
+  mappingUsers = () => {
+    return this.props.users.map(user => <ProfileTile key={user.id} user={user}/>)
+  }
+
+
   render() {
+    console.log(this.props.users);
     return (
       <MDBRow>
-        <MDBCol>
-          <MDBCard wide>
-            <MDBCardImage cascade className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg" />
-            <MDBCardBody cascade>
-              <MDBCardTitle>MDBCard title</MDBCardTitle>
-              <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-              <MDBBtn href="#">More info</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol>
-          <MDBCard narrow>
-            <MDBCardImage cascade className="img-fluid" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" />
-            <MDBCardBody cascade>
-              <MDBCardTitle>MDBCard title</MDBCardTitle>
-              <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-              <MDBBtn href="#">More info</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol>
-          <MDBCard cascade>
-            <MDBCardImage cascade className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" />
-            <MDBCardBody cascade>
-              <MDBCardTitle>MDBCard title</MDBCardTitle>
-              <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
-              <MDBBtn href="#">More info</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
+
+        {this.mappingUsers()}
+
+
       </MDBRow>
     )
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import ItemCard from "./ItemCard";
 import Search from "./Search";
-// import style from "./style.css"
+import style from "./style.css"
 
 var foursquare = require("react-foursquare")({
   clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",
@@ -42,30 +42,7 @@ export default class Venues extends Component {
     // debugger;
   };
 
-  //
-//   renderResults = () => {
-//     // return this.state.venues.map(venue => (
-//     //   <ItemCard
-//     //     key={venue.id}
-//     //     venue={venue}
-//     //     photo_url={venue.photo.prefix + "400x400" + venue.photo.suffix}
-//     //   />
-//     // ));
-//     _______________________________________________
-//   return this.state.venue.map(venue=> {
-//               if (venue.photo) {
-//                 <ItemCard
-//                  key={venue.id}
-//                  venue={venue}
-//                  photo_url = {venue.photo.prefix + '400x400' + venue.photo.suffix}
-//                  ratingColor = {'background-color: #' + venue.venue.ratingColor}
-//                  category_icon = {venue.venue.categories[0].icon.prefix + '100' +  venue.venue.categories[0].icon.suffix}
-//                  venue_url = {"https://foursquare.com/v/" + venue.venue.id}
-//                 />
-//             }})}
-// ______________________________________
-  // var photo_url = item.photo.prefix + '400x400' + item.photo.suffix
-  // <a href={venue_url}>
+  
   // getLocation(callback) {
   //     navigator.geolocation.getCurrentPosition(function(location) {
   //       callback(location.coords.latitude + ',' + location.coords.longitude)
@@ -92,7 +69,7 @@ export default class Venues extends Component {
                     var venue_url = "https://foursquare.com/v/" + item.venue.id;
                     return (
                       <div className="col-md-4" key={item.venue.id}>
-                      <a href={venue_url}>
+                      <a href={venue_url} target="_blank">
                         <div class="box">
                           <img src={photo_url}/>
                           <div className="wrap">

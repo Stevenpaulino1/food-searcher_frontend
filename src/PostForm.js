@@ -21,17 +21,11 @@ export default class PostForm extends Component {
   render() {
     console.log(this.state);
     return (
-      <div>
+      <div className="center">
         <h1>Create a blog post </h1>
         <UploadPhoto handlePhoto={this.handlePhoto} />
 
         <form onSubmit={e => this.props.handleSubmit(e, this.state)}>
-          <label>
-            Photo:
-            {/*<input type="text" name="image" readOnly value={this.state.image}/>*/}
-            {/*image*/}
-          </label>
-
           <label>
             Post Title:
             <input
@@ -41,7 +35,7 @@ export default class PostForm extends Component {
               onChange={this.handleChange}
             />
           </label>
-
+          <br/>
           <label>
             Post headline:
             <input
@@ -59,7 +53,7 @@ export default class PostForm extends Component {
             Body:
             <MDBInput
               type="textarea"
-              label="Icon Prefix"
+
               rows="2"
               icon="pencil"
               onChange={this.handleChange}

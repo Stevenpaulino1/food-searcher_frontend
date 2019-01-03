@@ -36,7 +36,8 @@ createUser = userInfo => {
         city: userInfo.city,
         state: userInfo.state,
         username: userInfo.username,
-        password: userInfo.password
+        password: userInfo.password,
+        bio:userInfo.bio
       }
     })
   }).then(res => res.json())
@@ -83,12 +84,14 @@ createUser = userInfo => {
     fetch("http://localhost:3000/api/v1/posts")
       .then(r => r.json())
       .then(posts => this.setState({posts:posts.data}))
-  }
+    fetch("http://localhost:3000/api/v1/users")
+    .then(r => r.json())
+    .then(users => this.setState({users:users.data}))  }
 
 
 
   render() {
-    // console.log(this.state.posts);
+    console.log(this.state);
     return (
       <div>
         <HomeNavBar/>
@@ -100,7 +103,7 @@ createUser = userInfo => {
           <Route path="/home" render={()=><PostFeed posts={this.state.posts}/>} />
           <Route path="/explore" render={()=> <Venues/>} />
           <Route path="/form" render={()=> <PostForm handleSubmit={this.handleSubmit}/>} />
-          <Route path="/profile" render={()=> <Profile user={this.state.user} posts={this.state.posts}/>}/>
+          <Route path="/profile" render={()=> <Profile users={this.state.users}/>}/>
         </Switch>
 
       </div>
