@@ -10,6 +10,8 @@ export default class Signup extends Component {
         state:'',
         username: '',
         password: '',
+        photoimage:'',
+
     }
 
     // add confirm password again
@@ -50,7 +52,7 @@ export default class Signup extends Component {
                     </Form.Field>
                     <Form.Field>
                         <label>Image Url</label>
-                        <input name="image"/>
+                        <input name="photoimage"/>
                     </Form.Field>
                         <Button type='submit' className="login-button">Submit</Button>
                 </Form>

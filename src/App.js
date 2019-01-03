@@ -3,11 +3,12 @@ import React, { Component } from "react";
 import "./App.css";
 import LandingPage from "./landingPage";
 import Venues from "./Venues";
-import PostForm from "./PostForm";
+import PostForm from "./PostForm1";
 import HomeNavBar from "./HomeNavBar"
 import PostFeed from './PostFeed.js'
 import Profile from './Profile'
 import SignUp from './SignUp'
+import sanitizeHtml from "sanitize-html";
 
 import { Route, Switch, withRouter } from "react-router-dom";
 
@@ -37,24 +38,34 @@ createUser = userInfo => {
         state: userInfo.state,
         username: userInfo.username,
         password: userInfo.password,
-        bio:userInfo.bio
+        bio:userInfo.bio,
+        photoimage:userInfo.photoimage
       }
     })
   }).then(res => res.json())
-  .then(user =>
-    this.setState({users: [...this.state.users, user]})
-   )
-    this.props.history.push("/profile")
+  .then(user => this.setState({users: [...this.state.users, user]})
+).then(this.props.history.push("/profile"))
+
   }
 // ----------------------------signup------------------------------------
-
+// handleSubmit = (e) => {
+//     const data = { ...this.state.post, content: sanitizeHtml(this.state.post.content), image: this.state.imageURL }
+//     this.props.handleSubmit(data)
+//     this.setState({
+//       post: {
+//         title: "",
+//         image: "",
+//         content: ""
+//       },
+//       imageURL: ""
+//     })
+//   }
 
 
   handleSubmit = (e, postObj) => {
     e.preventDefault();
     console.log("Post obj", postObj);
-    // debugger
-    // console.log("in the body");
+    const cleanBody = sanitizeHtml(postObj.body)
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -62,7 +73,7 @@ createUser = userInfo => {
         src: postObj.imageUrl,
         title: postObj.title,
         headline: postObj.headline,
-        body: postObj.body,
+        body: cleanBody,
       })
     };
     fetch("http://localhost:3000/api/v1/posts", options)

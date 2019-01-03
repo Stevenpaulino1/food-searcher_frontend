@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import UploadPhoto from "./CloudinaryWidget";
 import ContentEditable from 'react-contenteditable'
-import sanitizeHtml from "sanitize-html";
-import "./photoform.css"
+// import sanitizeHtml from "sanitize-html";
+import EditTextButton from './EditTextButton';
+
 
 
 
@@ -23,6 +24,11 @@ export default class PostForm extends Component {
   handlePhoto = imageUrl => {
     this.setState({ imageUrl });
   };
+
+  handleHTML = (e) => {
+
+  this.setState({body: e.target.value});
+}
 
   render() {
     console.log(this.state);
@@ -54,17 +60,29 @@ export default class PostForm extends Component {
           </label>
 
           <br />
-
+            <div className="row justify-content-between" style={{fontSize:"1.25rem", height:"3rem", marginLeft:"0", marginRight:"0"}}>
+                      <EditTextButton cmd="italic" />
+                      <EditTextButton cmd="bold" />
+                      <EditTextButton cmd="underline" />
+                      <EditTextButton cmd="strikeThrough" />
+                      <EditTextButton cmd="insertUnorderedList" />
+                      <EditTextButton cmd="insertOrderedList" />
+                      <EditTextButton cmd="indent" />
+                      <EditTextButton cmd="outdent" />
+                      <EditTextButton cmd="justifyLeft" />
+                      <EditTextButton cmd="justifyCenter" />
+                      <EditTextButton cmd="justifyRight" />
+                  </div>
           <label>
             Body:
-            <MDBInput
-              type="textarea"
-
-              rows="2"
-              icon="pencil"
-              onChange={this.handleChange}
-              placeholder="Whats on your mind?"
-            />
+            <ContentEditable
+            className="form-control"
+            style={{height:"25vh", overflowY: "scroll", wordWrap:"break-word"}}
+            name="content"
+            html={this.state.body}
+            onChange={this.handleHTML}
+            placeholder="Tell us your story..."
+          />
           </label>
 
           <br />

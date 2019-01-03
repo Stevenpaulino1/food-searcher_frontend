@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Gallery from "react-photo-gallery"
+// import Gallery from "react-photo-gallery"
 import "./Post.css"
 import {
   MDBRow,
