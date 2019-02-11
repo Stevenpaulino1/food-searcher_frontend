@@ -14,7 +14,6 @@ import { Route, Switch, withRouter } from "react-router-dom";
 
 class App extends Component {
   state = {
-    newPostObj: [],
     posts: [],
     users: []
   };
@@ -24,6 +23,7 @@ class App extends Component {
     console.log("in handleSubmit", userInfo)
   e.preventDefault()
   this.createUser(userInfo)
+
 }
 
 createUser = userInfo => {
@@ -39,33 +39,36 @@ createUser = userInfo => {
         username: userInfo.username,
         password: userInfo.password,
         bio:userInfo.bio,
-        photoimage:userInfo.photoimage
+        photoimage:userInfo.photoimage,
+        socialprofile:userInfo.socialprofile
       }
     })
   }).then(res => res.json())
   .then(user => this.setState({users: [...this.state.users, user]})
 ).then(this.props.history.push("/profile"))
+.then(setTimeout(()=> window.location.reload(), 300))
 
   }
 // ----------------------------signup------------------------------------
-// handleSubmit = (e) => {
-//     const data = { ...this.state.post, content: sanitizeHtml(this.state.post.content), image: this.state.imageURL }
-//     this.props.handleSubmit(data)
-//     this.setState({
-//       post: {
-//         title: "",
-//         image: "",
-//         content: ""
-//       },
-//       imageURL: ""
-//     })
-//   }
+handleSubmit = (e) => {
+    const data = { ...this.state.post, content: sanitizeHtml(this.state.post.content), image: this.state.imageURL }
+    this.props.handleSubmit(data)
+    this.setState({
+      post: {
+        title: "",
+        image: "",
+        content: ""
+      },
+      imageURL: ""
+    })
+  }
 
 
   handleSubmit = (e, postObj) => {
     e.preventDefault();
-    console.log("Post obj", postObj);
     const cleanBody = sanitizeHtml(postObj.body)
+    console.log("Post body", cleanBody);
+
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -97,7 +100,8 @@ createUser = userInfo => {
       .then(posts => this.setState({posts:posts.data}))
     fetch("http://localhost:3000/api/v1/users")
     .then(r => r.json())
-    .then(users => this.setState({users:users.data}))  }
+    .then(users => this.setState({users:users.data}))
+  }
 
 
 
@@ -110,7 +114,10 @@ createUser = userInfo => {
         <Switch>
 
           <Route exact path="/" render={()=><LandingPage/>}/>
+
           <Route path='/signup' render={ ()=> <SignUp handleSignup={this.handleSignup}/> }/>
+          <Route path='/login' render={ ()=> <login/> }/>
+
           <Route path="/home" render={()=><PostFeed posts={this.state.posts}/>} />
           <Route path="/explore" render={()=> <Venues/>} />
           <Route path="/form" render={()=> <PostForm handleSubmit={this.handleSubmit}/>} />

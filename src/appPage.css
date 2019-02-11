@@ -4,3 +4,11 @@
   background-size: cover;
 
 }
+
+.opacidad {
+  opacity: 0.1
+}
+
+.opacidad:hover {
+  opacity: 1
+}

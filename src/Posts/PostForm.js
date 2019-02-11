@@ -24,8 +24,12 @@ export default class PostForm extends Component {
     this.setState({ imageUrl });
   };
 
+componentDidUpdate(prevProps, prevState){
+  console.log("prev state",prevProps);
+  console.log("prevstate",prevState);
+  console.log("state",this.state);
+}
   render() {
-    console.log(this.state);
     return (
       <div className="center">
         <h1>Create a blog post </h1>
@@ -33,7 +37,7 @@ export default class PostForm extends Component {
 
         <form onSubmit={e => this.props.handleSubmit(e, this.state)}>
           <label>
-            Post Title:
+            Title:
             <input
               type="text"
               name="title"
@@ -43,13 +47,12 @@ export default class PostForm extends Component {
           </label>
           <br/>
           <label>
-            Post headline:
+            Headline:
             <input
               type="text"
               name="headline"
               value={this.state.headline}
               onChange={this.handleChange}
-              size="10"
             />
           </label>
 
@@ -59,8 +62,8 @@ export default class PostForm extends Component {
             Body:
             <MDBInput
               type="textarea"
-
-              rows="2"
+              label="Medium input"
+              rows="10"
               icon="pencil"
               onChange={this.handleChange}
               placeholder="Whats on your mind?"

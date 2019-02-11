@@ -6,16 +6,18 @@ export default class UploadPhoto extends Component {
   };
 
   showWidget = widget => {
+    console.log("in the showidget");
     widget.open();
   };
 
   checkUploadResult = (resultEvent, widget) => {
-    // console.log("Steven holla",resultEvent.event);
-    // console.log(widget);
+    console.log("checkUploadResult",resultEvent.event);
+    console.log(widget);
     if (resultEvent.event === "success") {
       widget.close();
       this.setState({ img: resultEvent.info.secure_url });
-      this.props.handlePhoto(resultEvent.info.secure_url);
+      this.props.handlePhoto(resultEvent.info.secure_url)
+      // this.setState({img:null})
     }
   };
 
@@ -29,9 +31,10 @@ export default class UploadPhoto extends Component {
       }
     );
 
-    if (this.state.img) {
+    if (this.state.img !== "") {
       image = <img className="box" src={this.state.img} alt="" />;
     }
+
 
     return (
       <div className="center">
@@ -40,8 +43,9 @@ export default class UploadPhoto extends Component {
             Click to choose a photo!{" "}
           </button>
         )}
-
+        <div className="opacidad">
         {image}
+        </div>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol } from 'mdbreact';
+import { MDBRow } from 'mdbreact';
 import ProfileTile from './profileTile'
 
 class Profile extends Component {

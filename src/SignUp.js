@@ -11,6 +11,7 @@ export default class Signup extends Component {
         username: '',
         password: '',
         photoimage:'',
+        socialprofile:''
 
     }
 
@@ -54,6 +55,10 @@ export default class Signup extends Component {
                         <label>Image Url</label>
                         <input name="photoimage"/>
                     </Form.Field>
+                    <Form.Field>
+                        <label>Social Media Profile</label>
+                        <input name="socialprofile"/>
+                    </Form.Field>
                         <Button type='submit' className="login-button">Submit</Button>
                 </Form>
             </div>
@@ -61,11 +66,3 @@ export default class Signup extends Component {
         )
     }
 }
-// <Form.Field>
-//     <label>Username</label>
-//     <input name="username"/>
-// </Form.Field>
-// <Form.Field>
-//     <label>Password</label>
-//     <input type='password' name="password"/>
-// </Form.Field>

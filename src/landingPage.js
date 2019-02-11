@@ -37,8 +37,10 @@ console.log(this.props.handleClick)
             </MDBCol>
           </div >
         </div>
-{/*        <Link to="/login"><button>Login</button></Link>
-*/}        <Link to="/signup"><button onClick={()=>this.props.handleClick}>Create a Profile</button></Link>
+        <Link to="/login"><button>Login</button></Link>
+
+        <Link to="/signup"><button onClick={()=>this.props.handleClick}>Create a Profile</button></Link>
+        
       </div>
     );
   }

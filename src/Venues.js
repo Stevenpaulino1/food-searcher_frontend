@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-// import ItemCard from "./ItemCard";
 import Search from "./Search";
-import style from "./style.css"
 
 var foursquare = require("react-foursquare")({
   clientID: "IGLBFJIGQ1KUX5SCJNBSQ5HCFESA2ZORHZ1XML0BNK4HTDYX",
@@ -42,7 +40,7 @@ export default class Venues extends Component {
     // debugger;
   };
 
-  
+
   // getLocation(callback) {
   //     navigator.geolocation.getCurrentPosition(function(location) {
   //       callback(location.coords.latitude + ',' + location.coords.longitude)
@@ -64,19 +62,19 @@ export default class Venues extends Component {
             { this.state.venues.map(item=> {
                   if (item.photo) {
                     var photo_url = item.photo.prefix + '400x400' + item.photo.suffix;
-                    var ratingColor = 'background-color: #' + item.venue.ratingColor;
+
                     var category_icon = item.venue.categories[0].icon.prefix + '100' +  item.venue.categories[0].icon.suffix;
                     var venue_url = "https://foursquare.com/v/" + item.venue.id;
                     return (
                       <div className="col-md-4" key={item.venue.id}>
                       <a href={venue_url} target="_blank">
                         <div class="box">
-                          <img src={photo_url}/>
+                          <img src={photo_url} alt="venue"/>
                           <div className="wrap">
                             <p className="venue_name">{item.venue.name}</p>
                             <p className="venue_address">{item.venue.location.address}, {item.venue.location.city}</p>
                             <span className="rating">{item.venue.rating}</span>
-                            <span className="category"><img class="category_icon" src={category_icon} /></span>
+                            <span className="category"><img class="category_icon" src={category_icon} alt="category" /></span>
                           </div>
                         </div>
                         </a>

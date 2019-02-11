@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Button, Form } from 'semantic-ui-react'
 import './Login.css'
 
 class Login extends Component {

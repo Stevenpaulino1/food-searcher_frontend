@@ -4,11 +4,6 @@ import ContentEditable from 'react-contenteditable'
 // import sanitizeHtml from "sanitize-html";
 import EditTextButton from './EditTextButton';
 
-
-
-
-import { MDBInput } from 'mdbreact';
-
 export default class PostForm extends Component {
   state = {
     title: "",
@@ -29,6 +24,14 @@ export default class PostForm extends Component {
 
   this.setState({body: e.target.value});
 }
+componentDidUpdate(prevProps, prevState){
+  console.log("prev state",prevProps);
+  console.log("prevstate",prevState);
+  console.log("state",this.state);
+  if (prevState.imageURL !== this.state.imageURL){
+    this.setState({imageURL:""})
+  }
+}
 
   render() {
     console.log(this.state);
@@ -39,7 +42,7 @@ export default class PostForm extends Component {
 
         <form onSubmit={e => this.props.handleSubmit(e, this.state)}>
           <label>
-            Post Title:
+            Title:
             <input
               type="text"
               name="title"
@@ -49,13 +52,13 @@ export default class PostForm extends Component {
           </label>
           <br/>
           <label>
-            Post headline:
+            Headline:
             <input
               type="text"
               name="headline"
               value={this.state.headline}
               onChange={this.handleChange}
-              size="10"
+
             />
           </label>
 
